@@ -1,8 +1,9 @@
 function inputChk() {
-    alert("1111"+document.getElementById("name").value + "typeof(Storage) = " + typeof(Storage));
+    //alert("1111"+document.getElementById("name").value + "typeof(Storage) = " + typeof(Storage));
 
     if (typeof(Storage) !== "undefined") {
-        alert("2222");
+        //alert("2222");
+
         localStorage.setItem("sellername", document.getElementById("name").value);
         localStorage.setItem("address", document.getElementById("address").value);
         localStorage.setItem("city", document.getElementById("city").value);
@@ -15,7 +16,7 @@ function inputChk() {
         localStorage.setItem("year", document.getElementById("year").value);
         
     } else {
-        alert("3333");
+        //alert("3333");
         document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
     }
 
@@ -25,51 +26,47 @@ function inputChk() {
     let address = $('#address').val();
     let city = $('#city').val();
     let province = $('#province').val();
-    let postcode = $('#postalcode').val();
+    let postalcode = $('#postalcode').val();
 
     let msg = "";
-    var output;a
+    var output;
 
 
     //Check name
     if(!validateLength(name)){
         msg += "Name is not valid.<br>"
     }
+
     //Check email
     if(!validateEmail(email)){
         msg += "Email is not valid<br>";
     }
+
     //Check phone
     if(!validatePhone(phone)){
         msg += "Phone number is not valid<br>";
     }
+
     //Check Address
     if(!validateLength(address)){
         msg += "Address is not valid<br>";
     }
+
     //Check City
     if(!validateLength(city)){
         msg += "City is not valid<br>";
     }
+
     //Province
     if(!validateLength(province)){
         msg += "Province is not valid<br>";
     }
-   
+
     //post code
-    if(!validatePostcode(postcode)){
+    if(!validatePostcode(postalcode)){
         msg += "Post Code is not valid<br>";
     }
     
-    //At least one product should be bought 
-    if(product1 == "" && product2 == "" && product3 == ""){
-        msg += "Must input at least one product<br>";
-    }
-    //product validate
-    //number
-    if(!validateNumber(product1) || !validateNumber(product2) || !validateNumber(product3)){
-        msg += "product should be a number<br>";
-    }
 
     if(msg != ""){
         output = `Error: ${msg} `;
