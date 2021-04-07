@@ -1,0 +1,117 @@
+/* the styles for the elements */
+* {
+	margin: 0;
+	padding: 0;
+}
+html {
+	background-color: white;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 600px;
+	height: 550px;
+    margin: 1em auto;
+    
+    background-color: #F2F2F2;
+}
+a:focus, a:hover {
+	font-style: italic;
+}
+
+p {
+	padding: 1em;
+}
+.First {
+	font-size: 14pt;
+}
+
+#submit{
+	margin: 0 8em;
+	height: 40px;
+}
+
+/* the styles for the main content */
+main {
+	clear: left;
+}
+button {
+	margin: 0.5em;
+	background-color: grey;
+}
+
+/* the styles for the form */
+fieldset {
+    margin-bottom: .5em;
+    padding: .5em 1em;
+}
+h2 {
+	text-align: center;
+	text-decoration: underline;
+}
+label, input, select {
+	font-size: 90%;
+}
+label {
+    float: left;
+    width: 10em;
+    text-align: left;
+	margin-left: 2em;
+}
+input, select {
+    width: 15em;
+    margin-left: 1em;
+    margin-bottom: 1em;	
+	padding-left: 0.5em;
+}
+input:required, input[required] input:invalid {
+	border: 2px solid gray;
+}
+input:valid {
+	border: 1px solid black;
+}
+input:invalid {
+	box-shadow: none;
+}
+#errorMsg {
+	color: red;
+	margin-left: 2em;
+}
+
+/*for Table*/
+table {
+	border-collapse: collapse;
+	margin: 1em 1em;
+	border: 1px solid black;
+	width: 470px;
+	
+}
+thead, tfoot {
+	border-top: 2px solid #800000;
+	border-bottom: 2px solid #800000;
+}
+th, td {
+	padding: .2em .7em;
+	text-align: left;
+}
+tr{
+	height: 35px;
+}
+tfoot th, tfoot td {
+	text-align: right;
+	font-weight: bold;
+}
+.right {
+	text-align: right;
+}
+
+section p{
+	text-align: center;
+}
+/* the styles for the footer */
+
+footer p {
+	text-align: center;
+	padding: 1em 0;
+}
+

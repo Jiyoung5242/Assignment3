@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script/input.js">
+
+        </script>
+
+    <script>
+
+    </script>
+    </head>
+
+    <body>
+        <section>
+			<h2>MY SHOP</h2><br><br>
+    		<form action="detailInfo.html" method="get"
+        		name="car_form" id="car_form" onsubmit="return inputChk()">
+                    <div id="errorMsg"></div>
+
+                    <label for="name"><span class="First">N</span>AME<sup>*</sup> :</label>
+                    <input type="text" name="name" id="name" autofocus ><br>
+                    
+                    <label for="address"><span class="First">A</span>DDRESS<sup>*</sup> :</label>
+                    <input type="text" name="address" id="address" ><br>
+
+                    <label for="city"><span class="First">C</span>ity<sup>*</sup> :</label>
+                    <input type="text" name="city" id="city" ><br>
+
+                    <label for="province"><span class="First">P</span>ROVINCE<sup>*</sup> :</label>
+                    <select name="province" id="province" >
+                        <option value="ALBERTA">ALBERTA</option>
+                        <option value="BRITISH COLUMBIA">BRITISH COLUMBIA</option>  
+                        <option value="MANITOBA">MANITOBA</option>
+                        <option value="NEW BRUNSWICK">NEW BRUNSWICK</option>
+                        <option value="NEWFOUNDLAND AND LABRADOR">NEWFOUNDLAND AND LABRADOR</option>
+                        <option value="NORTHWEST TERRITORIES">NORTHWEST TERRITORIES</option>
+                        <option value="NOVA SCOTIA">NOVA SCOTIA</option>
+                        <option value="NUNAVUT">NUNAVUT</option>                        
+                        <option value="ONTARIO">ONTARIO</option>          
+                        <option value="PEI">PEI</option>
+                        <option value="QUCBEC">QUEBEC</option>
+                        <option value="SASKATCHEWAN">SASKATCHEWAN</option>
+                        <option value="YUKON">YUKON</option>
+                    </select><br>
+
+                    <label for="postalcode"><span class="First">P</span>OST CODE<sup>*</sup> :</label>
+                    <input type="text" name="postalcode" id="postalcode"><br>
+
+                    <label for="phone"><span class="First">P</span>PHONE<sup>*</sup> :</label>
+					<input type="text" name="phone" id="phone" placeholder="999-999-9999" 
+                            title="Must be 999-999-999 format" ><br>
+
+	        		<label for="email"><span class="First">E</span>MAIL<sup>*</sup> :</label>
+                    <input type="text" name="email" id="email" ><br>
+                    
+                    <label for="maker"><span class="First">M</span>AKER<sup>*</sup> :</label>
+                    <input type="text" name="maker" id="maker"><br>
+                    <label for="model"><span class="First">M</span>ODEL<sup>*</sup> :</label>
+                    <input type="text" name="model" id="model" ><br>     
+                    <label for="year"><span class="First">Y</span>EAR<sup>*</sup> :</label>
+                    <input type="text" name="year" id="year" ><br> 
+
+					<input type="submit" id="submit" value="SAVE">
+            
+        
+            </form>
+        </section>
+
+    </body>
+    <footer>
+        <p>PROG2070 - Assignment3 by Jiyoung Jung</p>
+    </footer>
+</html>

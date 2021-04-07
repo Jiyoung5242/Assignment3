@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Order Summary</title>
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="script/invoice.js"></script>
+
+</head>
+
+<body>
+
+    <h2>My CAR LIST</h2>
+    <div id="result">here!</div>
+    <script>
+        // Check browser support
+        if (typeof(Storage) !== "undefined") {
+          // Store
+          localStorage.setItem("lastname", "Smith");
+          // Retrieve
+          document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+        } else {
+          document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+        }
+        </script>
+    <table>
+        <tr>
+            <td class="left" width="50%">NAME</td><td width="5%">:</td><td class="right" width="45%"><div id="_name"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%">EMAIL</td><td width="5%">:</td><td class="right" width="45%"><div id="_email"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%">PHONE</td><td width="5%">:</td><td class="right" width="45%"><div id="_phone"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%">DELIVERY ADDRESS</td><td width="5%">:</td><td class="right" width="45%"><div id="_address"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%"><span id="_product1"></span> PRODUCT1 @ $10.00</td><td width="5%">:</td><td class="right" width="45%"><div id="_product1Value"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%"><span id="_product2"></span> PRODUCT2 @ $20.00</td><td width="5%">:</td><td class="right" width="45%"><div id="_product2Value"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%"><span id="_product3"></span> PRODUCT3 @ $30.00</td><td width="5%">:</td><td class="right" width="45%"><div id="_product3Value"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%">SHIPPING CHARGES</td><td width="5%">:</td><td class="right" width="45%"><div id="_shippingCharges"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%">SUB TOTAL</td><td width="5%">:</td><td class="right" width="45%"><div id="_subTotal"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%">TAXES @ <span id="_rate"></span>%</td><td width="5%">:</td><td class="right" width="45%"><div id="_taxes"></div></td>
+        </tr>
+        <tr>
+            <td class="left" width="50%">TOTAL</td><td width="5%">:</td><td class="right" width="45%"><div id="_total"></div></td>
+        </tr>
+    </table>
+    <script type="text/javascript">display_data();</script>
+</body>
+</html>
