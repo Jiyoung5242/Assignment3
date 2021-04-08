@@ -27,6 +27,7 @@ function inputChk() {
     let city = $('#city').val();
     let province = $('#province').val();
     let postalcode = $('#postalcode').val();
+    let maker = $('#maker').val();
 
     let msg = "";
     var output;
@@ -62,6 +63,10 @@ function inputChk() {
         msg += "Province is not valid<br>";
     }
 
+    //Maker
+    if(!validateLength(maker)){
+        msg += "Maker is not valid<br>";
+    }
     //post code
     if(!validatePostcode(postalcode)){
         msg += "Post Code is not valid<br>";
@@ -119,11 +124,4 @@ function validatePostcode(postcode){
     return true;
 
 }
-//Validate product1,2,3
-//product input boxes should be a number
-function validateNumber(product){
-    if(product != "" && isNaN(product)){
-        return false;
-    }
-    return true;
-}
+
