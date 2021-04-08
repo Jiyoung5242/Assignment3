@@ -18,9 +18,9 @@ var display_data = function () {
     var inputProduct1;
     var inputProduct2;
     var inputProduct3;
-    var product1Price = 0;
-    var product2Price = 0;
-    var product3Price = 0;
+    var maker = 0;
+    var model = 0;
+    var year = 0;
     var inputDelivery;
     var shippingCharges = 0;
     var subTotal = 0;
@@ -38,7 +38,7 @@ var display_data = function () {
         
         var field_parts;
         console.log("query:" + query);
-/*
+
         for ( var i in fields ) {
             
             document.write("<tr>");
@@ -47,7 +47,7 @@ var display_data = function () {
             field_parts[1] = decode( field_parts[1] );
 
             switch (field_parts[0]){
-
+                /*
                 case 'name':                    
                     $('#_name').html(field_parts[1]);
                     break;
@@ -69,20 +69,21 @@ var display_data = function () {
                 case 'postcode':
                     inputPostCode = field_parts[1];                    
                     break;
+                    */
                 case 'maker':
-                    $('#_maker').html(field_parts[1]);
+                    maker = field_parts[1];
                     break;
                 case 'model':
-                    $('#_model').html(field_parts[1]);
+                    model = field_parts[1];
                     break;
                 case 'year':
-                    $('#_year').html(field_parts[1]);
+                    year = field_parts[1];
                     break;
             }
-            $('#_address').html(inputAddress+",<br>"+inputCity+",<br>"+inputProvince+","+inputPostCode);
+            //$('#_jdpower').html("http://www.jdpower.com/cars/"+maker+"/"+model+"/"+year);
             
         }
-      */ 
+      
      
         document.getElementById("_name").innerHTML = localStorage.getItem("sellername");
         document.getElementById("_address").innerHTML = localStorage.getItem("address");
@@ -94,8 +95,10 @@ var display_data = function () {
         document.getElementById("_maker").innerHTML = localStorage.getItem("maker");
         document.getElementById("_model").innerHTML = localStorage.getItem("model");
         document.getElementById("_year").innerHTML = localStorage.getItem("year");
-        var jdpower = "http://www.jdpower.com/cars/" + localStorage.getItem("maker") + "/" 
-                    + localStorage.getItem("model") + "/" + localStorage.getItem("year");
+        //var jdpower = "http://www.jdpower.com/cars/" + localStorage.getItem("maker") + "/" 
+        //            + localStorage.getItem("model") + "/" + localStorage.getItem("year");
+
+        var jdpower =    "http://www.jdpower.com/cars/"+maker+"/"+model+"/"+year;         
         document.getElementById("_jdpower").setAttribute("href",jdpower);
         document.getElementById("jdpower").innerHTML = jdpower;
     }
